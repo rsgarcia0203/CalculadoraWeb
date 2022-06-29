@@ -7,4 +7,4 @@ class CalculadoraView(View):
         context = {
             
         }
-        return render(request, 'calculadora/index.html', context)
+        return render(request, 'templates/index.html', context)

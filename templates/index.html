@@ -1,1 +1,170 @@
-hola
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta -->
+    <meta name="theme-color" content="#000000" />
+
+    <meta name="description" content="CalculadoraWeb">
+    <meta name="author" content="García Zambrano Ronny Steven">
+
+    <!-- css -->
+    <link rel="preload" href="{% static 'css/main.css' %}" as="style">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+
+    <!link rel="preload" href="img/hero-bg.png" as="image">
+
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+        <!-- font -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <!-- iconos -->
+        <link rel="apple-touch-icon" href="img/w.jpg">
+        <link rel="shortcut icon" href="img/letra-w.ico" type="image/x-icon">
+        <title>CalculadoraWeb</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <div class="header container">
+            <div class="header-nav">
+
+                <div class="logo">
+                    <a href="#inicio">
+                        <h1 class="header-logo negro">Calculadora Web</h1>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- fin header -->
+
+    <!-- inicio -->
+    <div class="container">
+        <div class="calculadora-container">
+            <div class="calculadora-container-btns">
+                <form name="Calculadora">
+                    <div class="answer"><input type="textfield" name="answer" value="" autocomplete="off" readonly></div>
+
+                    <input type="reset" value="C" class="btn-c">
+                    <input type="button" value="%" class="btn-porcentaje"
+                        onclick="document.Calculadora.answer.value+='%'">
+                    <input type="button" value="!" class="btn-factorial"
+                        onclick="document.Calculadora.answer.value+='!'">
+                    <input type="button" value="/" class="btn-division"
+                        onclick="document.Calculadora.answer.value+='/'">
+
+                    <br>
+
+                    <input type="button" value="7" class="btn-7" onclick="document.answer.value+='7'">
+                    <input type="button" value="8" class="btn-8" onclick="document.Calculadora.answer.value+='8'">
+                    <input type="button" value="9" class="btn-9" onclick="document.Calculadora.answer.value+='9'">
+                    <input type="button" value="+" class="btn-suma" onclick="document.Calculadora.answer.value+='+'">
+
+                    <br>
+
+                    <input type="button" value="4" class="btn-4" onclick="document.Calculadora.answer.value+='4'">
+                    <input type="button" value="5" class="btn-5" onclick="document.Calculadora.answer.value+='5'">
+                    <input type="button" value="6" class="btn-6" onclick="document.Calculadora.answer.value+='6'">
+                    <input type="button" value="-" class="btn-resta" onclick="document.Calculadora.answer.value+='-'">
+
+                    <br>
+
+                    <input type="button" value="1" class="btn-1" onclick="document.Calculadora.answer.value+='1'">
+                    <input type="button" value="2" class="btn-2" onclick="document.Calculadora.answer.value+='2'">
+                    <input type="button" value="3" class="btn-3" onclick="document.Calculadora.answer.value+='3'">
+                    <input type="button" value="x" class="btn-multiplicacion"
+                        onclick="document.Calculadora.answer.value+='x'">
+
+                    <br>
+
+                    <input type="button" value="+/-" class="btn-cambio-de-signo"
+                        onclick="document.Calculadora.answer.value=eval(document.Calculadora.answer.value)">
+                    <input type="button" value="0" class="btn-0" onclick="document.Calculadora.answer.value+='0'">
+                    <input type="button" value="." class="btn-punto" onclick="document.Calculadora.answer.value+='.'">
+                    <input type="button" value="=" class="btn-igual">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- fin -->
+
+    <!-- contacto -->
+    <section id="contacto">
+        <div class="contacto container">
+            <h1 class="titulo uppercase">Contacta<span class="titulo--color">Me</span></h1>
+            <div class="contacto-contenedor">
+
+                <div class="contacto-item">
+                    <i class="fas fa-phone-square-alt"></i>
+                    <div class="contacto-texto">
+                        <h3>Telefono</h3>
+                        <p>+593960144072</p>
+                    </div>
+                </div>
+
+
+                <div class="contacto-item">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <div class="contacto-texto">
+                        <h3>Email</h3>
+                        <p>rsgarcia@espol.edu.ec</p>
+                        <p>rgarcia3info@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contacto-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <div class="contacto-texto">
+                        <h3>Ciudad</h3>
+                        <p>Guayaquil, Ecuador</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- fin contacto -->
+
+    <!--icono subir -->
+
+    <div class="icono-subir">
+        <a href="#inicio">></a>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer">
+            <h2><span class="titulo--color">W</span>hite compan<span class="titulo--color">y</span></h2>
+            <p>Su solución web completa</p>
+            <div class="footer-iconos">
+                <a href="https://web.facebook.com/garena.flores.9" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/rgarcia/" target="blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/?hl=es-419" target="blank"><i class="fa fa-youtube"></i></a>
+                <a href="https://github.com/MartinAlexanderFloresTorres" target="blank"><i class="fa fa-github"></i></a>
+            </div>
+
+            <code>Copyright © 2022. Reservados todos los derechos</code>
+        </div>
+    </footer>
+    <!-- fin footer -->
+
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/b45f192329.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
