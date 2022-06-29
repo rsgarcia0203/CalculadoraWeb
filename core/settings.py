@@ -33,7 +33,8 @@ INSTALLED_APPS = [
     
     'core',
     'test',
-    'calculadora',
+    'Calculadora',
+    'templates',
 ]
 
 MIDDLEWARE = [
@@ -111,8 +112,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-STATIC_URL = 'static/'
+STATICFILES_FINDERS = [
+'django.contrib.staticfiles.finders.FileSystemFinder',
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+STATICFILES_DIRS = [
+os.path.join(PROJECT_DIR, 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
